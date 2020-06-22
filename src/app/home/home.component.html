@@ -1,9 +1,3 @@
-
-<p *ngIf="user">Logged in as:{{user?.email}}-{{user?.displayname}}</p>
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -16,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="home.component.css" media="screen"/>
     </head>
     <body>
-        <body background="fondo 1.png">
         <header>
             <button class="btn btn-primary" *ngIf="!user"(click)="login()"><a href="auth\login\login.component.html">Iniciar sesión</a></button>
             <button class="btn btn-primary mr-2" *ngIf="!user"(click)="register()">Registrarse</button>
@@ -29,6 +22,7 @@
             </font>
         </header>
         <nav>
+            <p *ngIf="user">Logged in as:{{user?.email}}-{{user?.displayName}}</p>
             <ul align="center">
                 <li><a href=”#”>Pag principal</a></li>
                 <li><a href=”#”>Publicar libro</a></li>
@@ -37,9 +31,7 @@
         </nav>
         <section>
             <font face="cooper black">
-                <hgroup>
-                    <h2 align="center">&#128218 Escribi el nombre del libro que estes buscando &#128218</h2>
-                </hgroup>
+                <h2 align="center">Escribi el nombre del libro que estes buscando</h2>
             </font>
         </section>
         <form action="" class="search">
