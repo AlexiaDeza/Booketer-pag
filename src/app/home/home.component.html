@@ -1,0 +1,60 @@
+
+<p *ngIf="user">Logged in as:{{user?.email}}-{{user?.displayname}}</p>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       
+        <meta charset="utf-8"/>
+        <title>Booketer-compra/venta de libros</title>
+        <meta name="description" content="En este sitio web los usuarios pueden publicar sus libros que quieran vender y/o comprarle libros a otros usuarios" />
+        <meta name="author" content="Barrigon y Deza"/>
+        <meta name="keywords" content="libro, libros, compra y venta de libros, comprar libros, vender libros"/>
+        <link rel="stylesheet" type="text/css" href="home.component.css" media="screen"/>
+    </head>
+    <body>
+        <body background="fondo 1.png">
+        <header>
+            <button class="btn btn-primary" *ngIf="!user"(click)="login()"><a href="auth\login\login.component.html">Iniciar sesión</a></button>
+            <button class="btn btn-primary mr-2" *ngIf="!user"(click)="register()">Registrarse</button>
+            <button class="btn btn-primary" *ngIf="user"(click)="logout()">Cerrar sesión</button>
+            <font size=7, color=fuchsia, face="cooper black">
+                <h1 align="center">Booketer</h1>
+            </font>
+            <font size=5, color=fuchsia, face="cooper black">
+                <h3 align="center">Pagina de compra y venta de libros</h3>
+            </font>
+        </header>
+        <nav>
+            <ul align="center">
+                <li><a href=”#”>Pag principal</a></li>
+                <li><a href=”#”>Publicar libro</a></li>
+                <li><a href=”#”>Contacto</a></li>
+            </ul>
+        </nav>
+        <section>
+            <font face="cooper black">
+                <hgroup>
+                    <h2 align="center">&#128218 Escribi el nombre del libro que estes buscando &#128218</h2>
+                </hgroup>
+            </font>
+        </section>
+        <form action="" class="search">
+            <!-- We'll have a button that'll make the search input appear, a submit button and the input -->
+            
+            <!-- Alos, a label for it so that we can style it however we want it-->
+            <input id="submit" value="" type="submit">
+            <label for="submit" class="submit"></label>
+            
+            <!-- trigger button and input -->
+            <a href="javascript: void(0)" class="icon"></a>
+            <input type="search" name="Search" id="search" placeholder="Search">
+        </form>
+        
+        <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <footer align="center">Pagina hecha por Barrigon Pablo y Deza Alexia</footer>
+    </body>
+</html>

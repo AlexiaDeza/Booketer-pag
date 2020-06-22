@@ -1,0 +1,97 @@
+button{
+    font-family: "cooper black";
+    font-size: 14px;
+    background-color: #d71385;
+    color: #fff;
+}
+button:hover{
+    background-color: #37b36f;
+}
+nav {
+    padding: 0;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    font-family: "cooper black";
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+nav li a:hover {
+    background-color: #37b36f;
+    margin-top: -2;
+    padding-bottom: 12px;
+}
+
+/* Some initial styling */
+
+* {
+	box-sizing: border-box;
+}
+
+h2{
+    margin:100px
+}
+
+form {
+	width: 200px;
+	height: 330px;
+	margin: 1px auto 0;
+	position: relative;
+}
+
+/* Ok, HTML markup is complete */
+/* submit button will also be the same but with a different color. We'll style the label and the submit input */
+/* a faky 3D look */
+
+#submit {
+	display: none;	
+}
+
+form .icon, form .submit {
+	width: 25px;
+	height: 25px;
+	background: #d71385;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-shadow:
+		0px 5px #bc0aad,
+		0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+form .submit {
+	background: #4c84aa;
+	cursor: pointer;
+	box-shadow:
+		0px 5px #0276c1,
+		0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Now, we'll create a search (magnifying glass) icon using pseudo elements */
+form .icon:after, form .submit:after  {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 2px solid white;
+	border-radius: 50%;
+	left: 6px;
+	top: 5px;
+}
+
+form .icon:before, form .submit:before {
+	content: '';
+	position: absolute;
+	height: 8px;
+	width: 2px;
+	background: white;
+	transform: rotate(-35deg);
+	top: 15px;
+	left: 17px;
+}
